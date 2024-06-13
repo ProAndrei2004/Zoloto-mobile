@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zoloto.ProductionPage"
+             Title="ProductionPage">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="10">
+            <Entry x:Name="name" Placeholder="Введите ваше имя" />
+            <Entry x:Name="phone" Placeholder="Введите ваш номер телефона" Keyboard="Telephone"/>
+            <Label Text="Не забудте написать нужный размер кольца"/>
+            <Editor x:Name="editor"
+                Placeholder="Опишите ваши пожелания по изделию"
+                HeightRequest="250"/>
+            <Label
+                Text="Отстутствует интернет подключение"
+                Style="{StaticResource Headline}"
+                IsEnabled="False"
+                x:Name="Internet"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Image x:Name="ima" HeightRequest="205"/>
+            <Button Text="Добавить фотографию" Clicked="GetPhotoAsync"/>
+            <Button x:Name="Send" Text="Отправить запрос" Clicked="Send_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
